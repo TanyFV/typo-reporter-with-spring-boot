@@ -1,0 +1,19 @@
+# ===================================================================
+# This configuration is used for unit/integration tests with testcontainers database containers.
+# To activate this configuration launch integration tests with the 'testcontainers' profile
+# ===================================================================
+spring:
+  application:
+    name: typo-reporter
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:12.5-alpine:///typo-reporter?TC_TMPFS=/testtmpfs:rw
+    username: developer
+    password:
+    hikari:
+      auto-commit: false
