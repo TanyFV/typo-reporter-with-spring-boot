@@ -1,4 +1,4 @@
-package io.hexlet.typoreporter.test.utils;
+package io.hexlet.typoreporter.domain.typo;
 
 import io.hexlet.typoreporter.domain.typo.Typo;
 import org.junit.jupiter.params.ParameterizedTest;
