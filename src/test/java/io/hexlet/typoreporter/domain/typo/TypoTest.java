@@ -1,6 +1,5 @@
 package io.hexlet.typoreporter.domain.typo;
 
-import io.hexlet.typoreporter.domain.typo.Typo;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
