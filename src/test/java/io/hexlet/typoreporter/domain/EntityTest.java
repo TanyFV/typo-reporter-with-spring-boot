@@ -5,12 +5,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.assertj.core.api.Assertions.assertThat;
 
-
+@JsonTest
 public class EntityTest {
     @Autowired
     private ObjectMapper objectMapper;
