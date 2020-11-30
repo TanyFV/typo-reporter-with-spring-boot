@@ -1,11 +1,13 @@
 package io.hexlet.typoreporter.domain.typo;
 
 import io.hexlet.typoreporter.domain.Identifiable;
+import io.hexlet.typoreporter.domain.typo.constraint.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
@@ -17,12 +19,22 @@ public class Typo implements Identifiable<Long> {
     @SequenceGenerator(name = "typo_id_seq", allocationSize = 15)
     private Long id;
 
+    @TypoPageUrl
     private String pageUrl;
+
+    @ReporterName
     private String reporterName;
+
+    @ReporterComment
     private String reporterComment;
 
+    @TextBeforeTypo
     private String textBeforeTypo;
+
+    @TextTypo
     private String textTypo;
+
+    @TextAfterTypo
     private String textAfterTypo;
 
     public enum TypoStatus {
@@ -32,7 +44,7 @@ public class Typo implements Identifiable<Long> {
         RESOLVED,
         CANCELED
     }
-
+    @NotNull
     @Enumerated(EnumType.STRING)
     private TypoStatus typoStatus = TypoStatus.REPORTED;
 
