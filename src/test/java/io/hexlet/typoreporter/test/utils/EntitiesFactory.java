@@ -9,7 +9,7 @@ public class EntitiesFactory {
     public static Stream<Typo> getTypos() {
         final var typo1 = new Typo()
                 .setId(1L)
-                .setPageUrl("PageUrl")
+                .setPageUrl("http://site.com")
                 .setReporterName("ReporterName")
                 .setReporterComment("ReporterComment")
                 .setTextBeforeTypo("TextBeforeTypo")
@@ -18,7 +18,7 @@ public class EntitiesFactory {
 
         final var typo2 = new Typo()
                 .setId(2L)
-                .setPageUrl("PageUrl")
+                .setPageUrl("http://site.com")
                 .setReporterName("ReporterName");
         return Stream.of(typo1, typo2);
     }

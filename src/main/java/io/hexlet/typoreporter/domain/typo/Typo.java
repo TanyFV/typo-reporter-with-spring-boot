@@ -1,5 +1,6 @@
 package io.hexlet.typoreporter.domain.typo;
 
+import io.hexlet.typoreporter.domain.AbstractAuditingEntity;
 import io.hexlet.typoreporter.domain.Identifiable;
 import io.hexlet.typoreporter.domain.typo.constraint.*;
 import lombok.Data;
@@ -13,7 +14,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-public class Typo implements Identifiable<Long> {
+public class Typo extends AbstractAuditingEntity implements Identifiable<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "typo_id_seq")
     @SequenceGenerator(name = "typo_id_seq", allocationSize = 15)
