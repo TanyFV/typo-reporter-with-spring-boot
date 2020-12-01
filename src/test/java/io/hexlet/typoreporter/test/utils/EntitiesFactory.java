@@ -19,6 +19,7 @@ public class EntitiesFactory {
         final var typo2 = new Typo()
                 .setId(2L)
                 .setPageUrl("http://site.com")
+                .setTextTypo("TextTypo")
                 .setReporterName("ReporterName");
         return Stream.of(typo1, typo2);
     }
