@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Import(AuditConfiguration.class)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @ActiveProfiles("testcontainers")
-class TypoRepositoryIT extends TestcontainerDataSource {
+class TypoRepositoryIT {
     @Autowired
     private TypoRepository repository;
 
